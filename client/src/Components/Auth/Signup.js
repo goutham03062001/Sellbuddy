@@ -18,6 +18,7 @@ const Signup = ({register}) => {
         }
         else{
             register({name,email,password})
+            console.log(name,email,password)
         }
     }
   return (
