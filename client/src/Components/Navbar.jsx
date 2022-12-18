@@ -1,5 +1,5 @@
 import React from "react";
-import Messages from '../Pages/Messages';
+
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
