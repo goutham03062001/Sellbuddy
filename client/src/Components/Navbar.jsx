@@ -1,4 +1,5 @@
 import React from "react";
+import Messages from '../Pages/Messages'
 function Navbar() {
   return (
     <>
@@ -26,8 +27,8 @@ function Navbar() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  About
+                <a class="nav-link" href="../Pages/Messages.jsx">
+                  Messages
                 </a>
               </li>
             </ul>
