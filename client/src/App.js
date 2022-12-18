@@ -1,43 +1,29 @@
-// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
+import React from "react";
 import Home from "./Components/Home";
 import Messages from "./Pages/Messages";
-
-// import React from "react";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-// const App = () => {
-//   return (
-    
-//       <Router>
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           <Route path="/messages" element={<Messages />} />
-//         </Routes>
-//       </Router>
-    
-//   );
-// };
-
-// export default App;
-
-
-import React from 'react';
-import './App.css'; 
-import { BrowserRouter as Router, Routes, Route}
-    from 'react-router-dom';
-  
+import Navbar from "./Components/Navbar";
+import Signup from "./Components/Auth/Signup";
+import Login from "./Components/Auth/Login";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import store from "./store";
+import { Provider } from "react-redux";
 function App() {
-return (
-    <Router>
-      <h2>Hello bhaya
-      </h2>
-    <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route path='/messages' element={<Messages/>} />
-    </Routes>
-    </Router>
-);
+  return (
+    <>
+        <Provider store={store}>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+    </Provider>
+    </>
+  );
 }
-  
+
 export default App;
