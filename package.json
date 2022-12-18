@@ -7,6 +7,6 @@
   }  ,
   "scripts": {
     "startclient": "cd client && npm start",
-    "buildclient": "cd client && npm build"
+    "buildclient": "cd client && npm run build"
   }
 }
