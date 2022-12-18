@@ -1,5 +1,12 @@
 {
+  "name": "Sellbuddy",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "react-router-dom": "^6.5.0"
+  }  ,
+  "scripts": {
+    "startclient": "cd client && npm start",
+    "buildclient": "cd client && npm build"
   }
 }
